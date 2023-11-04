@@ -49,8 +49,8 @@ namespace PHATASS.Docs.Examples
 	//MonoBehaviour lifecycle
 		private void Update ()
 		{
-			// If SPACE key has been pressed down this frame, invoke every available support source
-			if (Input.GetKeyDown(KeyCode.Space))
+			// If SPACE key is pressed, invoke every available support source
+			if (Input.GetKey(KeyCode.Space))
 			{ this.CallSupport(); }
 		}
 
