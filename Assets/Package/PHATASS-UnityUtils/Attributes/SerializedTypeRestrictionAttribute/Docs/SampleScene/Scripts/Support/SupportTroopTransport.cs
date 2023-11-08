@@ -7,7 +7,7 @@ namespace PHATASS.Docs.Examples
 //	It implements the ISupport interface so it can be called as a support source
 //
 	// You might want to add a CreateAssetMenu to your ScriptableObjects
-	[CreateAssetMenu(menuName = "PHATASS/Examples/New SupportTroopTransport", order = 0, fileName = "SupportTroopTransport")]
+	//[CreateAssetMenu(menuName = "PHATASS/Examples/New SupportTroopTransport", order = 0, fileName = "SupportTroopTransport")]
 	public class SupportTroopTransport :
 		ScriptableObject,
 		ISupport
