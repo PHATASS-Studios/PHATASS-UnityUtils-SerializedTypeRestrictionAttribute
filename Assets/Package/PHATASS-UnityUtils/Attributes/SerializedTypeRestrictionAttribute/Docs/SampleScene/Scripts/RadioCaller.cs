@@ -46,6 +46,27 @@ namespace PHATASS.Docs.Examples
 		}
 	//ENDOF Multi-Element serialization sample
 
+	/* Copy-pasteable code sample.
+	// replacements:
+	//	{INTERFACE_TYPE} > the name of your desired interface or base class
+	//	{FIELD_NAME} > the name of your desired interface or base class
+
+		[Tooltip("Tooltip text")]
+		[SerializeField]
+		[SerializedTypeRestriction(typeof({INTERFACE_TYPE}))]
+		private List<UnityEngine.Object> _{FIELD_NAME} = null;			// Private backing field. Don't access this outside the getter property
+		private IList<{INTERFACE_TYPE}> _{FIELD_NAME}Accessor = null;	// Wrapper cache. We store here our IList<{INTERFACE_TYPE}> wrapper for easy access
+		public IList<{INTERFACE_TYPE}> {FIELD_NAME}						// Getter property. Access this to get a usable IList<{INTERFACE_TYPE}>
+		{ get {
+				if (this._{FIELD_NAME}Accessor == null && this._{FIELD_NAME} != null) //create accessor if unavailable
+				{ this._{FIELD_NAME}Accessor = new PHATASS.Utils.Types.Wrappers.UnityObjectListCastedAccessor<{INTERFACE_TYPE}>(this._{FIELD_NAME}); }
+
+				return this._{FIELD_NAME}Accessor;
+			}
+		}
+
+	*/ //ENDOF Copy-pasteable code sample.
+
 	//MonoBehaviour lifecycle
 		private void Update ()
 		{
