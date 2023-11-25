@@ -44,17 +44,17 @@ namespace PHATASS.Docs.Examples
 
 	/* Copy-pasteable code sample.
 	// replacements:
-	//	{INTERFACE_TYPE} > the name of your desired interface or base class
-	//	{FIELD_NAME} > the name of your desired interface or base class
+	//	@INTERFACE_TYPE@ > the Type name of your desired interface or base class
+	//	@FIELD_NAME@ > the name of the field
 
 		[Tooltip("Tooltip text")]
 		[SerializeField]
-		[SerializedTypeRestriction(typeof({INTERFACE_TYPE}))]
-		private UnityEngine.Object _{FIELD_NAME} = null;	// Private backing field. Don't access this outside the getter property
-		private {INTERFACE_TYPE} {FIELD_NAME}				// Getter property. Access this to get a usable {INTERFACE_TYPE}. May be null.
+		[SerializedTypeRestriction(typeof(@INTERFACE_TYPE@))]
+		private UnityEngine.Object _@FIELD_NAME@ = null;	// Private backing field. Don't access this outside the getter property
+		private @INTERFACE_TYPE@ @FIELD_NAME@				// Getter property. Access this to get a usable @INTERFACE_TYPE@. May be null.
 		{ get {
-			if (this._{FIELD_NAME} == null) { return null; }	// Manually handle if field is null first
-			else { return this._{FIELD_NAME} as {INTERFACE_TYPE}; }	// Return a properly boxed reference otherwise
+			if (this._@FIELD_NAME@ == null) { return null; }	// Manually handle if field is null first
+			else { return this._@FIELD_NAME@ as @INTERFACE_TYPE@; }	// Return a properly boxed reference otherwise
 		}}
 
 	*/ //ENDOF Copy-pasteable code sample.
